@@ -1,21 +1,13 @@
 package quantum.ai.registration;
 
 import lombok.SneakyThrows;
-import org.apache.commons.lang3.time.StopWatch;
-import org.jsoup.Connection;
 import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.FormElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxDriverLogLevel;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.logging.LogType;
-import org.openqa.selenium.logging.LoggingPreferences;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import quantum.ai.person.Person;
@@ -23,7 +15,6 @@ import quantum.ai.person.PersonFacade;
 
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.Level;
 
 public class SeleniumRegistrationService {
 
@@ -46,7 +37,6 @@ public class SeleniumRegistrationService {
 
         final FirefoxOptions options = new FirefoxOptions();
         options.setLogLevel(FirefoxDriverLogLevel.FATAL);
-
 
         final WebDriver driver = new FirefoxDriver(options);
         try {

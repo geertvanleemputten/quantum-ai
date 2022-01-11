@@ -1,9 +1,11 @@
 package quantum.ai.person;
 
+import lombok.extern.log4j.Log4j2;
 import quantum.ai.namefake.NameFakeAPIResponse;
 import quantum.ai.namefake.NameFakeAPIService;
 import quantum.ai.phone.PhoneService;
 
+@Log4j2
 public class PersonFacade {
 
     private NameFakeAPIService nameFakeAPIService = new NameFakeAPIService();
@@ -20,7 +22,7 @@ public class PersonFacade {
                 .phone(phone)
                 .build();
 
-        System.out.println("Generated " + person);
+        log.info("Generated " + person);
         return person;
     }
 
