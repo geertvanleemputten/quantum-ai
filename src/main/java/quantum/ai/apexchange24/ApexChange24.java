@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class ApexChange24 {
 
-    private static final String[] threads = new String[1000];
+    private static final String[] threads = new String[6];
     private static final JsoupRegistrationService registerService = new JsoupRegistrationService();
 
     public static void main(String... args) {
