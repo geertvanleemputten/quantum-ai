@@ -3,16 +3,19 @@ package quantum.ai.namefake;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Setter;
 
-import java.util.Locale;
-
 @Setter
 public class NameFakeAPIResponse {
 
     private String name;
+    private String address;
     @JsonProperty("email_u")
     private String emailA;
     @JsonProperty("email_d")
     private String emailB;
+
+    public String getAddress() {
+        return address;
+    }
 
     public String getFirstname() {
         return name.substring(0, name.indexOf(" "));

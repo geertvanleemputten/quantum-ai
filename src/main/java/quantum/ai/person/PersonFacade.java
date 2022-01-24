@@ -15,10 +15,11 @@ public class PersonFacade {
         final NameFakeAPIResponse nameFakePerson = nameFakeAPIService.getFakePerson();
         final String phone = phoneService.getRandomPhone();
 
-        Person person = Person.builder()
+        final Person person = Person.builder()
                 .firstname(nameFakePerson.getFirstname())
                 .lastname(nameFakePerson.getLastname())
                 .email(nameFakePerson.getEmail())
+                .address(nameFakePerson.getAddress())
                 .phone(phone)
                 .build();
 
