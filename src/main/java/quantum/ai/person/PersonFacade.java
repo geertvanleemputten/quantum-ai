@@ -1,6 +1,7 @@
 package quantum.ai.person;
 
 import lombok.extern.log4j.Log4j2;
+import org.apache.commons.lang3.RandomStringUtils;
 import quantum.ai.namefake.NameFakeAPIResponse;
 import quantum.ai.namefake.NameFakeAPIService;
 import quantum.ai.phone.PhoneService;
@@ -19,7 +20,8 @@ public class PersonFacade {
                 .firstname(nameFakePerson.getFirstname())
                 .lastname(nameFakePerson.getLastname())
                 .email(nameFakePerson.getEmail())
-                .address(nameFakePerson.getAddress())
+                .address(RandomStringUtils.random(10, true, false) + " " + RandomStringUtils.random(3, false, true))
+                .postalcode(RandomStringUtils.random(4, false, true))
                 .phone(phone)
                 .build();
 

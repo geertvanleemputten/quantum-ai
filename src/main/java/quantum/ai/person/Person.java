@@ -9,5 +9,5 @@ import lombok.ToString;
 @ToString
 public class Person {
 
-    private String firstname, lastname, email, phone, address;
+    private String firstname, lastname, email, phone, address, postalcode;
 }

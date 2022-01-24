@@ -1,7 +1,6 @@
 package quantum.ai.btreservecc;
 
 import lombok.SneakyThrows;
-import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.time.StopWatch;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
@@ -39,8 +38,8 @@ public class JsoupRegistrationService {
         document.select("input[name=\"Name\"]").first().val(person.getFirstname());
         document.select("input[name=\"LastName\"]").first().val(person.getLastname());
         document.select("input[name=\"Email\"]").first().val(person.getEmail());
-        document.select("input[name=\"address\"]").first().val(RandomStringUtils.random(10, true, false) + " " + RandomStringUtils.random(3, false, true));
-        document.select("input[name=\"postalcode\"]").first().val(RandomStringUtils.random(4, false, true));
+        document.select("input[name=\"address\"]").first().val(person.getAddress());
+        document.select("input[name=\"postalcode\"]").first().val(person.getPostalcode());
         document.select("option[value=\"BE\"]").first().attr("selected", "true");
         document.select("input[name=\"Phone\"]").first().val("+32" + person.getPhone());
         document.select("input[name=\"Password\"]").first().val("1234Abcd");
