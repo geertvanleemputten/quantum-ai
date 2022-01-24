@@ -1,7 +1,4 @@
-package quantum.ai;
-
-import quantum.ai.registration.JsoupRegistrationService;
-import quantum.ai.registration.SeleniumRegistrationService;
+package quantum.ai.deprecated;
 
 import java.util.Arrays;
 

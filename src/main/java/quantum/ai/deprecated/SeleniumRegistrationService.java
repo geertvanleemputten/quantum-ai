@@ -1,4 +1,4 @@
-package quantum.ai.registration;
+package quantum.ai.deprecated;
 
 import lombok.SneakyThrows;
 import org.jsoup.Jsoup;

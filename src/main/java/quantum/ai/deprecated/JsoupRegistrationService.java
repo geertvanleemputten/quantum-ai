@@ -1,4 +1,4 @@
-package quantum.ai.registration;
+package quantum.ai.deprecated;
 
 import lombok.SneakyThrows;
 import org.apache.commons.lang3.time.StopWatch;
@@ -8,8 +8,6 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.FormElement;
 import quantum.ai.person.Person;
 import quantum.ai.person.PersonFacade;
-
-import java.util.Random;
 
 public class JsoupRegistrationService {
 
